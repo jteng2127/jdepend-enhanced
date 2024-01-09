@@ -48,7 +48,7 @@ FROM debian:stable-slim as prod
 
 # Install Java and python
 RUN apt-get update \
-    && apt-get install -y openjdk-17-jdk python3 python3-pip \
+    && apt-get install -y --no-install-recommends openjdk-17-jdk python3 python3-pip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
